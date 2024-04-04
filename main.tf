@@ -60,7 +60,7 @@ resource "azurerm_key_vault" "keyharr01" {
   location                    = azurerm_resource_group.dev_ops01.location
   resource_group_name         = azurerm_resource_group.dev_ops01.name
   enabled_for_disk_encryption = true
-  tenant_id                   = "2fda06a3-e8aa-49ef-bd11-bf41f2b56686"  # Replace with the appropriate interpolation or reference
+  tenant_id                   = "##################"  # Replace with the appropriate interpolation or reference
   soft_delete_retention_days  = 7
   purge_protection_enabled    = false
   sku_name                    = "standard"
@@ -68,16 +68,16 @@ resource "azurerm_key_vault" "keyharr01" {
 
 resource "azurerm_key_vault_access_policy" "SP" {
   key_vault_id       = azurerm_key_vault.keyharr01.id
-  tenant_id          = "2fda06a3-e8aa-49ef-bd11-bf41f2b56686"
-  object_id          = "9a73fc7d-8414-4d74-98a7-3b20d184b9bb"
+  tenant_id          = "####################"
+  object_id          = "########################"
   key_permissions    = ["Get", "Create", "List", "Restore", "Recover", "UnwrapKey", "WrapKey", "Purge", "Encrypt", "Decrypt", "Sign", "Verify"]
   secret_permissions = ["Get", "Delete", "List"]
 }
 
 resource "azurerm_key_vault_access_policy" "SPuser" {
   key_vault_id       = azurerm_key_vault.keyharr01.id
-  tenant_id          = "2fda06a3-e8aa-49ef-bd11-bf41f2b56686"
-  object_id          = "da0ad0f1-8bd3-4734-8f62-9c675bc22ec6"
+  tenant_id          = "########################"
+  object_id          = "#######################"
   key_permissions    = ["Get", "Create", "List", "Restore", "Recover", "UnwrapKey", "WrapKey", "Purge", "Encrypt", "Decrypt", "Sign", "Verify"]
   secret_permissions = ["Get", "Delete", "List", "Set"]
 }
