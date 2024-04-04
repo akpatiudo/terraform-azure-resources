@@ -80,7 +80,8 @@ Plan the deployment using terraform plan command to preview changes.
 
 Apply the changes using terraform apply command to provision resources in Azure.
 
-![image](https://github.com/akpatiudo/terraform-azure-resources/assets/118566096/c4c75a45-1d23-4943-a73c-a8bf0c6337d7)
+![image](https://github.com/akpatiudo/terraform-azure-resources/assets/118566096/77935073-beb8-49e0-9b8a-170977ff584e)
+
 
 
 ## Summary:
